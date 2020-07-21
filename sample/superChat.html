@@ -35,6 +35,9 @@
 		//embedded_svc.settings.fallbackRouting = []; //Uma matriz de IDs de botão, IDs de usuário ou userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Padronizado para Entre em contato conosco)
 		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "FirstName",
+															"value": "GermanoF",
+															"displayToAgent": true
+														},{ "label": "LastName",
 															"value": "Germano",
 															"displayToAgent": true
 														},{ "label": "Id",
@@ -51,17 +54,23 @@
 													"linkToEntityName": "Case",
 													"linkToEntityField": "ContactId",
 													"entityFieldMaps": [{
-														"doCreate": false,
-														"doFind": true,
-														"fieldName": "Id",
-														"isExactMatch": true,
-														"label": "Id"
+															"doCreate": false,
+															"doFind": true,
+															"fieldName": "Id",
+															"isExactMatch": true,
+															"label": "Id"
 														},{
-														"doCreate":false,
-														"doFind":false,
-														"fieldName":"FirstName",
-														"isExactMatch":false,
-														"label":"First Name"
+															"doCreate":false,
+															"doFind":false,
+															"fieldName":"FirstName",
+															"isExactMatch":false,
+															"label":"FirstName"
+														},{
+															"doCreate":false,
+															"doFind":false,
+															"fieldName":"LastName",
+															"isExactMatch":false,
+															"label":"LastName"
 														}]
 												},{ "showOnCreate": true,
 													"entityName": "ProtocoloAtendimento__c",
