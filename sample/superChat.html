@@ -40,9 +40,12 @@
 														},{ "label": "RecordTypeId",
 															"value": "0125C000000KC7PQAW",
 															"displayToAgent": false
+														},{ "label": "FirstName",
+															"value": "Germano",
+															"displayToAgent": true
 														}]; 
 				   
-		embedded_svc.settings.extraPrechatInfo = [{ "showOnCreate": false,
+		embedded_svc.settings.extraPrechatInfo = [{ "showOnCreate": true,
 													"entityName": "Contact",
 													"saveToTranscript": "ContactId",
 													"linkToEntityName": "Case",
@@ -53,12 +56,18 @@
 														"fieldName": "Id",
 														"isExactMatch": true,
 														"label": "Id"
+														},{
+														"doCreate":false,
+														"doFind":false,
+														"fieldName":"FirstName",
+														"isExactMatch":false,
+														"label":"First Name"
 														}]
 												},{ "entityName": "Case",
 													"showOnCreate": true,
 													"saveToTranscript": "CaseId",
 													"entityFieldMaps": [{
-														"isExactMatch": false,
+														"isExactMatch": true,
 														"fieldName": "RecordTypeId",
 														"doCreate": true,
 														"doFind": false,
