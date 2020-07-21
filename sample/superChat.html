@@ -34,6 +34,37 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Define o preenchimento automático de campos de formulário de pré-chat
 		//embedded_svc.settings.fallbackRouting = []; //Uma matriz de IDs de botão, IDs de usuário ou userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Padronizado para Entre em contato conosco)
+		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "Id",
+															"value": "0035w000034hcP9AAI",
+															"displayToAgent": false
+														},{ "label": "RecordTypeId",
+															"value": "0125C000000KC7PQAW",
+															"displayToAgent": false
+														}]; 
+				   
+		embedded_svc.settings.extraPrechatInfo = [{ "showOnCreate": false,
+													"entityName": "Contact",
+													"saveToTranscript": "ContactId",
+													"linkToEntityName": "Case",
+													"linkToEntityField": "ContactId",
+													"entityFieldMaps": [{
+														"doCreate": false,
+														"doFind": true,
+														"fieldName": "Id",
+														"isExactMatch": true,
+														"label": "Id"
+														}]
+												},{ "entityName": "Case",
+													"showOnCreate": true,
+													"saveToTranscript": "CaseId",
+													"entityFieldMaps": [{
+														"isExactMatch": false,
+														"fieldName": "RecordTypeId",
+														"doCreate": false,
+														"doFind": false,
+														"label": "RecordTypeId"
+														}]
+												  }];
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
