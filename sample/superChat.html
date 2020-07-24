@@ -41,24 +41,36 @@
 															"value": "Chat",
 															"displayToAgent": true
 														},{ "label": "Id",
-															"value": "0015C00000U55pq",
-															"displayToAgent": true
+															"value": "0035C00000LG4QeQAL",
+															"displayToAgent": false
 														},{ "label": "RecordTypeId",
-															"value": "0125C000000KC7t",
-															"displayToAgent": true
+															"value": "0125C000000KC7PQAW",
+															"displayToAgent": false
 														}]; 
 				   
 		embedded_svc.settings.extraPrechatInfo = [{ "showOnCreate": true,
-													"entityName": "Account",
-													"saveToTranscript": "AccountId",
+													"entityName": "Contact",
+													"saveToTranscript": "ContactId",
 													"linkToEntityName": "Case",
-													"linkToEntityField": "AccountId",
+													"linkToEntityField": "ContactId",
 													"entityFieldMaps": [{
 															"doCreate": false,
 															"doFind": true,
 															"fieldName": "Id",
 															"isExactMatch": true,
 															"label": "Id"
+														},{
+															"doCreate":false,
+															"doFind":false,
+															"fieldName":"FirstName",
+															"isExactMatch":false,
+															"label":"FirstName"
+														},{
+															"doCreate":false,
+															"doFind":false,
+															"fieldName":"LastName",
+															"isExactMatch":false,
+															"label":"LastName"
 														}]
 												},{ "entityName": "Case",
 													"showOnCreate": true,
