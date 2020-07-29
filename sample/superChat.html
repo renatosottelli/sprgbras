@@ -31,16 +31,16 @@
 			// Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
 			// Returns a valid button ID.
 		//};
-		embedded_svc.settings.prepopulatedPrechatFields = {FirstName: 'Leonardo'}; //Define o preenchimento automático de campos de formulário de pré-chat
+		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Define o preenchimento automático de campos de formulário de pré-chat
 		//embedded_svc.settings.fallbackRouting = []; //Uma matriz de IDs de botão, IDs de usuário ou userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Padronizado para Entre em contato conosco)
 		//VDG = 0015C00000U55pqQAB - SGI = 0015C00000U6cjVQAR
 		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "FirstName",
-															"value": "Germano",
-															"displayToAgent": true
+															"value": "Leonardo",
+															"displayToAgent": false
 														},{ "label": "Origin",
 															"value": "Chat",
-															"displayToAgent": true
+															"displayToAgent": false
 														},{ "label": "Id",
 															"value": "0015C00000U6cjVQAR",  
 															"displayToAgent": false
@@ -49,7 +49,17 @@
 															"displayToAgent": false
 														}]; 
 				   
-		embedded_svc.settings.extraPrechatInfo = [{ "showOnCreate": true,
+		embedded_svc.settings.extraPrechatInfo = [{ "entityName": "Contact",
+													"showOnCreate": false,
+													"saveToTranscript": "",
+													"entityFieldMaps": [{
+														"isExactMatch": false, 
+														"fieldName": "FirstName",
+														"doCreate": false, 
+														"doFind": false, 
+														"label": "FirstName"
+													}]
+												},{ "showOnCreate": true,
 													"entityName": "Account",
 													"saveToTranscript": "AccountId",
 													"linkToEntityName": "Case",
