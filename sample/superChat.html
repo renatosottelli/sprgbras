@@ -1,5 +1,4 @@
-
-   <style type='text/css'>
+<style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
 		background-color: #EB640A;
 		font-family: "Salesforce Sans", sans-serif;
@@ -21,7 +20,7 @@
 		embedded_svc.settings.language = 'pt-BR'; //Por exemplo, insira "pt" ou "pt-BR"
 
 		embedded_svc.settings.defaultMinimizedText = 'Iniciar bate-papo'; //(Assume como padrão o Chat com um especialista)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Assume como padrão Agente off-line)
+		embedded_svc.settings.disabledMinimizedText = 'Agente off-line'; //(Assume como padrão Agente off-line)
 
 		embedded_svc.settings.loadingText = 'Carregando'; //(Assume como padrão Carregando)
 		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Define o domínio de sua implantação para que seus visitantes possam navegar em subdomínios durante uma sessão de chat)
@@ -34,7 +33,7 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Define o preenchimento automático de campos de formulário de pré-chat
 		//embedded_svc.settings.fallbackRouting = []; //Uma matriz de IDs de botão, IDs de usuário ou userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Padronizado para Entre em contato conosco)
-		//VDG = 0015C00000U55pqQAB - SGI = 0015C00000U6cjVQAR
+		//VDG = 0015C00000U5EVpQAN - SGI = 0015C00000UafCgQAJ
 		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "FirstName",
 															"value": "Leonardo",
 															"displayToAgent": false
@@ -42,10 +41,10 @@
 															"value": "Chat",
 															"displayToAgent": false
 														},{ "label": "Id",
-															"value": "0015C00000U6cjVQAR",  
+															"value": "0015C00000U5EVpQAN",  
 															"displayToAgent": false
 														},{ "label": "RecordTypeId",
-															"value": "0125C000000KC7tQAG",
+															"value": "0125C000000KC8NQAW",
 															"displayToAgent": false
 														}]; 
 				   
@@ -93,17 +92,17 @@
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
-			'https://supergasbras--SER.my.salesforce.com',
-			'https://ser-supergasbras-community-dev.cs62.force.com/AssistenciaTecnica',
+			'https://supergasbras--SERQA.my.salesforce.com',
+			'https://serqa-supergasbras-community.cs62.force.com/AssistenciaTecnica',
 			gslbBaseURL,
-			'00D5C00000011gr',
+			'00D5C00000011hK',
 			'CanaisDigitais',
 			{
 				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia4.salesforceliveagent.com/content',
-				deploymentId: '5725C0000004CDK',
-				buttonId: '5735C0000004CG9',
+				deploymentId: '5725C0000004CDy',
+				buttonId: '5735C0000004CGd',
 				baseLiveAgentURL: 'https://d.la2-c1cs-ia4.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'Canais_Digitais',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5C000000Kyo1UAC_173a1077e95',
 				isOfflineSupportEnabled: false
 			}
 		);
@@ -111,7 +110,7 @@
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://supergasbras--SER.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://supergasbras--SERQA.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
