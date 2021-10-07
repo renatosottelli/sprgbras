@@ -33,6 +33,7 @@
 		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
 		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+
 		embedded_svc.settings.extraPrechatFormDetails = [{ "label": "FirstName",
 															"value": "COND EDIF SAO LUCAS", //Nome da Conta ou Usuário
 															"displayToAgent": false
@@ -87,21 +88,21 @@
 														}]
 												  }];
 
-		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+	  	embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 
 		embedded_svc.init(
 			'https://supergasbras--uat.my.salesforce.com',
-			'https://uat-supergasbras-community.cs68.force.com/AssistenciaTecnica',
+			'https://uat-supergasbras-community.cs159.force.com/AssistenciaTecnica',
 			gslbBaseURL,
-			'00D1D0000007DxT',
+			'00D7X0000004bAw',
 			'CanaisDigitais',
 			{
-				baseLiveAgentContentURL: 'https://c.la4-c1cs-phx.salesforceliveagent.com/content',
+				baseLiveAgentContentURL: 'https://c.la2-c1cs-ia4.salesforceliveagent.com/content',
 				deploymentId: '5721Y000000NXVA',
 				buttonId: '5731Y000000NaVm',
-				baseLiveAgentURL: 'https://d.la4-c1cs-phx.salesforceliveagent.com/chat',
-				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1Y000000blMNUAY_177fea7eae6',
+				baseLiveAgentURL: 'https://d.la2-c1cs-ia4.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1Y000000blMNUAY_17871376008',
 				isOfflineSupportEnabled: false
 			}
 		);
